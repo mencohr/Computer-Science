@@ -1,0 +1,9 @@
+"""Reads an integer and prints the cumulative sum."""
+
+int = int(input("Submit a number: "))
+sum = 0
+
+for i in range(1,int+1):
+    sum += i
+
+print(sum)

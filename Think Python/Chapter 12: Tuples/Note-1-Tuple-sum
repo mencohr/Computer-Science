@@ -1,0 +1,7 @@
+tup = (1, 2, 3)
+
+def sum_all(arg):
+    """Sums any number of arguments and returns the sum."""
+    return sum(arg)
+
+print(sum_all(tup))

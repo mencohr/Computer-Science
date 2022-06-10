@@ -1,0 +1,20 @@
+import math
+
+class Point(object):
+    "Returns a 2D point."
+
+p1 = Point()
+p1.x = 2
+p1.y = 3
+
+p2 = Point()
+p2.x = 4
+p2.y = 1
+
+def distance(p1, p2):
+    """Returns distance between two points as arguments."""
+    delta_x = (p2.x - p1.x) ** 2
+    delta_y = (p2.y - p1.y) ** 2
+    return math.sqrt(delta_x + delta_y)
+
+print(distance(p1, p2))

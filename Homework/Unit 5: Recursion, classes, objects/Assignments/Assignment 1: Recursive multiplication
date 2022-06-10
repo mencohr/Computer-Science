@@ -1,0 +1,7 @@
+def multiply(x, y):
+    """Multiplies without product operators or loops."""
+    if y <= 1:
+        return x
+    return x + multiply(x, y - 1)
+
+print(multiply(5, 8))

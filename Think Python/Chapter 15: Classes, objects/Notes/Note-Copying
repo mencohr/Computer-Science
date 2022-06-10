@@ -1,0 +1,26 @@
+import copy
+
+class Point(object):
+    """Represents 2D point."""
+
+class Rectangle(object):
+    """Represents rectangle for width, height, corner."""
+
+box = Rectangle()
+box.width = 100
+box.height = 200
+box.corner = Point()
+box.corner.x = 0
+box.corner.y = 0
+
+box2 = copy.deepcopy(box)
+
+def move_rectangle(dx, dy):
+    """Creates and returns a new rectangle, without modifying."""
+    box2.corner.x += dx
+    box2.corner.y += dy
+    return box2.corner.x, box2.corner.y
+
+move_rectangle(2, 3)
+print(box.corner.x, box.corner.y)
+print(box2.corner.x, box2.corner.y)

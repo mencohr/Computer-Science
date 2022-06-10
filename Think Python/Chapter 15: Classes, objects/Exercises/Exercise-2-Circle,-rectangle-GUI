@@ -1,0 +1,52 @@
+import turtle
+
+class Point():
+    """Represents 2D point."""
+class Rectangle():
+    """Represents rectangle."""
+
+circle_center = Point()
+circle_center.x = 0
+circle_center.y = 0
+circle_center.radius = 100
+
+box = Rectangle()
+box.lower_left_corner = Point()
+box.lower_left_corner.x = 50
+box.lower_left_corner.y = 50
+box.width = 100
+box.height = 200
+
+def circle(t):
+    """Draws a circle and rectangle."""
+    t.up()
+    t.goto(circle_center.x, circle_center.y)
+    t.dot()
+    t.forward(circle_center.radius)
+    t.down()
+    t.left(90)
+    t.color("red")
+    t.circle(circle_center.radius)
+    t.right(90)
+    t.up()
+
+    t.goto(box.lower_left_corner.x, box.lower_left_corner.y)
+    t.color("blue")
+    t.left(90)
+    t.down()
+    t.forward(box.height)
+    t.right(90)
+    t.forward(box.width)
+    t.right(90)
+    t.forward(box.height)
+    t.right(90)
+    t.forward(box.width)
+    t.up()
+    t.left(180)
+    t.color("black")
+    
+    t.goto(0,0)
+
+t = turtle.Turtle()
+print(circle(t))
+turtle.Screen().exitonclick()

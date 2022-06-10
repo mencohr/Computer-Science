@@ -1,0 +1,7 @@
+def gcd(x, y):
+    """Takes parameters x and y and returns the greatest common divisor."""
+    if x % y == 0:
+        return y
+    return gcd(y, x % y)
+
+print(gcd(10, 15))

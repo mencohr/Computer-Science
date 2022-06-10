@@ -1,0 +1,11 @@
+def countup(x, count=1):
+    """Recursively counts up to a positive integer."""
+    if x <= 0:
+        return "Must be positive integer above 0."
+    elif x % 1 != 0:
+        return "Must be integer."
+    elif x < 2:
+        return str(x)
+    return countup(x - 1) + " " + str(x)
+
+print(countup(5))

@@ -1,0 +1,6 @@
+# An example of reassigning variables.
+
+myValue = 999
+print("The type of myValue is ", type(myValue))
+myValue = "I am the very model of a modern major general."
+print("The type of myValue is ", type(myValue))

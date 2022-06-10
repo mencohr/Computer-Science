@@ -1,0 +1,10 @@
+"""Asks for a positive integer and prints all positive integers, dividing evenly including itself and one, in ascending order."""
+
+prompt = int(input("Enter a positive integer: "))
+
+if prompt < 0:
+    prompt = int(input("Enter a positive integer only: "))
+else:
+    for num in range(1, prompt + 1):
+        if prompt % num == 0:
+            print(num)

@@ -1,0 +1,29 @@
+# Draw a stack diagram for the program. Explain what it prints.
+
+def b(z):
+    """Outputs function c total and function 'a' product."""
+    prod = a(z, z)
+    print(z, prod)
+    return prod
+
+def a(x, y):
+    """Outputs function c total and duplicate plus one."""
+    x = x + 1
+    return x * y
+
+def c(x, y, z):
+    """Sums total of x, y, z and squares function 'a' product."""
+    total = x + y + z
+    square = b(total)**2
+    return square
+
+x = 1
+y = x + 1
+print(c(x, y+3, x+y))
+
+| main |                                     |                 |
+| ---- | ----------------------------------- | --------------- |
+| c    | (x,y,z) --> (1,5,3)                 | total --> 9     |
+| b    | z --> 9                             |                 |
+| a    | (x,y) --> (9,9) \| (x,y) --> (10,9) | prod --> 90     |
+| c    | b(total) --> b(9)                   | square --> 8100 |

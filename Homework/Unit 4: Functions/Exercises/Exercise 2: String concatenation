@@ -1,0 +1,5 @@
+def combine(x, y):
+	"""Takes two strings and returns a concatenated string."""
+    return x + " " + y
+
+print(combine("Hello", "world"))

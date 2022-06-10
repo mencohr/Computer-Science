@@ -1,0 +1,36 @@
+every_other_input = ["parsley", "sage", "rosemary", "thyme"]
+
+def every_other(x):
+    """Returns every other element in a list."""
+    return x[::2]
+
+print(every_other(every_other_input))
+
+array_sum_input = ["Wayne", "Katie", "Daryl", "Dan"]
+
+def array_sum(x):
+    """Sums characters in a list of strings."""
+    count = 0
+    for i in x:
+        i = len(i)
+        count += i
+    return count
+
+print(array_sum(array_sum_input))
+
+rev_string_list_input = ["Wayne", "Katie", "Daryl", "Dan"]
+
+def rev_string_list(x):
+    """Reverses a string list."""
+    return [x[::-1] for x in x]
+
+print(rev_string_list(rev_string_list_input))
+
+contain_string_input1 = ["cats", "tacks", "scat", "stack"]
+contain_string_input2 = "cat"
+
+def contain_string(x, y):
+    """Determines if a string is in a list."""
+    return [x for x in x if y in x]
+
+print(contain_string(contain_string_input1, contain_string_input2))

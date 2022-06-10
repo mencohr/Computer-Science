@@ -1,0 +1,14 @@
+def hailstone(x):
+    """Takes a positive integer and returns the number of steps to reach one in a hailstone sequence."""
+    n = 0
+    if x == 1:                  # The number of steps to reach 1 is 1.
+        return n
+    while x != 1:
+        n += 1                 
+        if x % 2 == 0:          # Divide evens by two for next integer.
+            x /= 2
+        else:                   # Multiply odds by 3 and add 1 for next integer. 
+            x = (x * 3) + 1
+    return n
+
+print(hailstone(3))

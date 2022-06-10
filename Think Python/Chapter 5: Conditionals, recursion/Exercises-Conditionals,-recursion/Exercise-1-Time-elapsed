@@ -1,0 +1,13 @@
+# Reads current time and converts it to the time of day in hours, minutes, and seconds plus the number of days since the epoch.
+
+import time
+
+total_days = time.time() / (3600 * 24)
+rem_days = total_days % 365
+hours = (rem_days * 24) % 24
+min = (hours * 60) % 60
+sec = (min * 60) % 60
+
+print("Time: " + str(int(hours)) + ":" + str(int(min)) + ":" + str(int(sec)) + " UTC")
+
+print(str(int(total_days)) + " days since the epoch")

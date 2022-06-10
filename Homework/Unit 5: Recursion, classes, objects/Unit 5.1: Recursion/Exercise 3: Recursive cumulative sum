@@ -1,0 +1,11 @@
+def sum_countup(x):
+    """Recursively sums every integer between 1 and a positive integer."""
+    if x < 0:
+        return "Must be positive integer above 0."
+    elif x % 1 != 0:
+        return "Must be integer."
+    elif x == 1:
+        return 1
+    return x + sum_countup(x - 1)
+
+print(sum_countup(3))

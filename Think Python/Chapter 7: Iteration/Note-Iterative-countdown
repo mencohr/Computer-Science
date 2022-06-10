@@ -1,0 +1,11 @@
+def countdown(num):
+    """Counts down iteratively."""
+    for i in range(1,num+1):
+        i = num
+        num -= 1
+        print(i)
+
+    if i == 1:
+        return "Blastoff"
+
+print(countdown(5))

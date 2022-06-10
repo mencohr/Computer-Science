@@ -1,0 +1,22 @@
+"""Asks the user for a name and prints "Hello" followed by that name."""
+
+name = input(str("Input your name: "))
+print("Hello " + name)
+
+"""Asks the user for two numbers and prints "The result is" followed by the product."""
+
+print("Input two numbers.")
+num_1 = float(input())
+num_2 = float(input())
+print("The result is ", num_1 * num_2)
+
+"""Stores the above resulting product in a variable and prints the result."""
+
+print("Input two numbers.")
+
+num_1 = float(input())
+num_2 = float(input())
+
+product = num_1 * num_2
+
+print("The result is ", product)

@@ -1,0 +1,8 @@
+# Practice incremental development.
+
+def hypotenuse(a, b):
+    """Returns the length of the hypotenuse of a right triangle."""
+    c = ((a ** 2) + (b ** 2)) ** 0.5
+    return c
+
+print(hypotenuse(1, 2))

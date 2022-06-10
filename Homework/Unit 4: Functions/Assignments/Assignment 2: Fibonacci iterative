@@ -1,0 +1,18 @@
+def fib(x):
+    """Computes the Fibonacci sequence iteratively."""
+    if x == 0:
+        return 0
+    elif x <= 2:
+        return 1
+    else:
+        n = 2
+        a = 1
+        b = 1
+        while n != x:
+            c = a + b
+            n += 1
+            a = b
+            b = c
+        return c
+
+print(fib(5))

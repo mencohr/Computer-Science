@@ -1,0 +1,6 @@
+def fall_distance(t):
+    """Returns the distance in meters an object has fallen in a timespan."""
+    d = 0.5 * 9.8 * (t ** 2)
+    return d
+
+print(fall_distance(3.2))

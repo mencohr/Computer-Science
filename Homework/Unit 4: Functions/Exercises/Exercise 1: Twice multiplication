@@ -1,0 +1,5 @@
+def twice(x):
+    """Returns twice a number inputted."""
+    return x * 2
+
+print(twice(5))

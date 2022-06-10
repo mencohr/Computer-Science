@@ -1,0 +1,24 @@
+"""Prints the remainder of 19 divided by 6."""
+
+print(19 % 6)
+
+"""Prints two to the fourth power."""
+
+print(2**4)
+
+"""Computes the result of nine divided by five and assigns it to variable conversion_ratio."""
+
+conversion_ratio = 9 / 5
+print(conversion_ratio)
+
+"""Assigns nine to variable num_planets and subtracts one for num_planets to equal eight."""
+
+num_planets = 9
+num_planets -= 1
+print(num_planets)
+
+"""Assigns "Doctor" to variable title, "Pierce" to variable last_name, and prints "Doctor Pierce"."""
+
+title = "Doctor"
+last_name = "Pierce"
+print(title + " " + last_name)

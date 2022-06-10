@@ -1,0 +1,20 @@
+"""Asks how many integers to enter with initial input >= 1. Prompts input for that many integers, then outputs the largest and smallest. Without lists."""
+
+how_many = int(input("How many integers to enter? "))
+
+if how_many < 1:
+    print("Enter a valid amount.")
+else:
+    prompt = int(input("Enter " + str(how_many) + " integer(s):" + "\n"))
+    count = how_many - 1
+    max_num = prompt
+    min_num = prompt
+    while count != 0:
+        num = int(input())
+        if num > max_num:
+            max_num = num
+        elif num < min_num:
+            min_num = num
+        count -= 1
+    print("max: " + str(max_num) + "\n"
+          + "min: " + str(min_num))

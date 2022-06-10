@@ -1,0 +1,19 @@
+"""Prints the float value 290.73."""
+
+print(float(290.73))
+
+"""Prints the string value "He replied, 'Nevermind,' and shut the door.""""
+
+print("He replied, 'Nevermind,' and shut the door.")
+
+"""Prints the bool value True, not the string value "True"."""
+
+print(True)
+
+"""Prints the result of the type command on the value 99."""
+
+print(type(99))
+
+"""Prints the type of the value "What is your quest?""""
+
+print(type("What is your quest?"))

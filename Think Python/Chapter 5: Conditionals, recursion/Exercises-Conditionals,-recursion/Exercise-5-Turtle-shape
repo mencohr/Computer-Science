@@ -1,0 +1,18 @@
+import turtle
+
+def draw(t, length, n):
+    """Draws a shape."""
+    if n == 0:
+        return
+    angle = 50
+    t.forward(length*n)
+    t.left(angle)
+    draw(t, length, n-1)
+    t.right(2*angle)
+    draw(t, length, n-1)
+    t.left(angle)
+    t.backward(length*n)
+
+t = turtle.Turtle()
+
+draw(t, 10, 3)

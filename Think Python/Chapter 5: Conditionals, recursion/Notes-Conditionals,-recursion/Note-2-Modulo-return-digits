@@ -1,0 +1,4 @@
+# Floor division, modulus. 
+
+x % 10 # yields right-most digit
+x %100 # yields last two digits, and so on

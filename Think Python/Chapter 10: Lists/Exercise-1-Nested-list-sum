@@ -1,0 +1,89 @@
+a = [[1, 2], [3], [4, 5, 6]]
+
+def nested_sum(x):
+    """Computes sum of all elements in a nested list."""
+    total = 0
+    for i in range(len(x)):
+        for i in x[i]:
+            total += i
+    return total
+
+print("Nested sum:", nested_sum(a))
+
+b = [1, 2, 3]
+
+def cumsum(x):
+    """Adds newest iteration with itself and most recent iteration cumulatively."""
+    cumlist = []
+    n = 0
+
+    for i in x:
+        i += n
+        n = i
+        cumlist.append(i)
+
+    return cumlist
+
+print(cumsum(b))
+
+c = [1, 2, 3, 4]
+
+def middle(x):
+    """Returns all but first and last elements of a list."""
+    return x[1:-1]
+
+print("Middle input:", middle(c))
+
+d = [1, 2, 3, 4]
+
+def chop(x):
+    """Removes first and elements of a list while returning None."""
+    x.remove(d[0])
+    x.remove(d[-1])
+
+chop(d)
+print("Chop:", d)
+
+e = [1, 2, 2]
+f = ["b", "a"]
+
+def is_sorted(x):
+    """Determines if a list is sorted."""
+    x2 = x[:]
+    x2.sort()
+    return x == x2
+
+print("Is sorted 1:", is_sorted(e))
+print("Is sorted 2:", is_sorted(f))
+
+g = "act"
+h = "cat"
+i = "Punishment"
+j = "Nine thumps"
+
+def is_anagram(x, y):
+    """Determines if two strings are anagrams."""
+    x = x.lower()
+    y = y.lower()
+    x = x.replace(" ", "")
+    y = y.replace(" ", "")
+    x = list(x)
+    y = list(y)
+    x.sort()
+    y.sort()
+    return x == y
+
+print("Is anagram 1:", is_anagram(g, h))
+print("Is anagram 2:", is_anagram(i, j))
+
+k = [1, 2, 3, 4, 2]
+
+def has_duplicates(x):
+    """Determines if duplicates exist in a list."""
+    new_x = []
+    [new_x.append(x) for x in x if x not in new_x]
+    if new_x != x:
+        return True
+    return False
+
+print("Has duplicates:", has_duplicates(k))

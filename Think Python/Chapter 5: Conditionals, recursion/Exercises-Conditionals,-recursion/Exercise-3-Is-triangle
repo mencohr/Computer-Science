@@ -1,0 +1,13 @@
+def is_triangle(a, b, c):
+    """Determines if three integers can form a triangle from given lengths."""
+    if (a + b < c) or (c + a < b) or (b + c < a):
+        return "No"
+    else:
+        return "Yes"
+
+def test():
+    """Input for is_triangle."""
+    a, b, c = (int(x) for x in (input("Submit a, b, c: ").split(",")))
+    print(is_triangle(a, b, c))
+
+test()

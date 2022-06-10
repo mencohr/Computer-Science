@@ -1,0 +1,28 @@
+x = open("(DOC_LOCATION)", "r")
+
+def words_append():
+    """Lists all words of a text file as separate list items using append."""
+    """More steps to execute than using an idiom; calls the append module each time."""
+    lst = []
+    with x as file:
+        for i in file:
+            i = i.split()
+            for ele in i:
+                lst.append(ele)
+    return lst
+
+print(words_append())
+
+x = open("(DOC_LOCATION)", "r")
+
+def words_idiom():
+    """Lists all words of a text file as separate list items without append."""
+    """Less steps to execute than using append; doesn't call a module each time."""
+    lst = []
+    with x as file:
+        for i in file:
+            i = i.split()
+            lst += i
+            return lst
+
+print(words_idiom())

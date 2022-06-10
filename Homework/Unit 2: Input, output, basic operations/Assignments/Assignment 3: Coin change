@@ -1,0 +1,19 @@
+"""Asks the user for an integer number of cents, from 0 to 99, and outputs how many of each coin represent the amount with the fewest number of coins."""
+
+print("Enter an amount in cents less than a dollar: ")
+amount = int(input())
+
+quarters = amount // 25
+dimes = (amount % 25) // 10
+nickels = ((amount % 25) % 10) // 5
+pennies = (((amount % 25) % 10) % 5)
+
+if amount > int(99):
+    print("Must be less than one dollar.")
+elif amount < int(0):
+    print("Must be a positive amount.")
+else: print("Change is: \n"
+      "Q: " + str(quarters) + "\n" +
+      "D: " + str(dimes) + "\n" +
+      "N: " + str(nickels) + "\n" +
+      "P: " + str(pennies))

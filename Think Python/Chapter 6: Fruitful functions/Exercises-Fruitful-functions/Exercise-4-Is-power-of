@@ -1,0 +1,15 @@
+def is_power(a, b):
+    """Takes parameters 'A', B and returns True if 'A' is a power of B."""
+    if a == 1:          # If 'A' is 1, it's only a power of 1.
+        return b == 1
+
+    pow = 1             # Calculates power of 'A' repeatedly.
+    while pow < b:
+        pow = pow * a
+
+    return pow == b     # Check if 'A' is a power of B. 
+
+print(is_power(5, 125))
+print(is_power(10, 1000))
+print(is_power(4, 1))
+print(is_power(1, 2))

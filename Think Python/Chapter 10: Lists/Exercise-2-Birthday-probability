@@ -1,0 +1,20 @@
+import random
+
+def same_bday():
+    """Computes probability of 23 people having the same birthay."""
+    timer = 0
+    count = 0
+
+    while timer < 100:
+        timer += 1
+        x = [random.randint(1, 365) for _ in range(23)]
+        x.sort()
+        x2 = []
+        [x2.append(x) for x in x if x not in x2]
+        x2.sort()
+        if x == x2:
+            count += 1
+
+    return str((count / 100) * 100) + "%"
+
+print(same_bday())

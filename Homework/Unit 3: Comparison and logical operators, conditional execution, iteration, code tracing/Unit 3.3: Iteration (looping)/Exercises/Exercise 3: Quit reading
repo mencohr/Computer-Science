@@ -1,0 +1,7 @@
+"""Continues reading and printing a string until the user enters "quit"."""
+
+string = str(input("Submit a string: "))
+
+while string != "quit":
+    print(string)
+    string = str(input())

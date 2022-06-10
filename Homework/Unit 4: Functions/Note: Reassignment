@@ -1,0 +1,11 @@
+def sum_1(num_1, num_2, num_3=0):
+ return num_1 + num_2 + num_3
+
+def sum_2(num_1, num_2, num_3=0):
+ return num_1 + num_2 + num_3
+
+# Only two arguments needed with a default argument.
+print(sum_1(1,2))
+
+# However, a third can reassign the default argument. 
+print(sum_2(1,2,3))

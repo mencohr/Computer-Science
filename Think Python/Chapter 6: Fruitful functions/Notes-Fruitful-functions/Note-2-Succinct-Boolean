@@ -1,0 +1,6 @@
+def is_between(x, y, z):
+    """Returns True if y between x and z."""
+    return x <= y <= z		# A more succinct Boolean function. 
+
+print(is_between(1, 2, 3))
+print(is_between(3, 2, 1))

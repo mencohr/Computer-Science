@@ -1,0 +1,31 @@
+tmi = (1, 2, 3)
+
+def tuple_madness(tup):
+    """Slicing a tuple doesn't mutate the original."""
+    return tup[1:]
+
+print("Assignment 1 output:", tuple_madness(tmi))
+
+ifli1, ifei1 = [9, -55, 37], "bob"
+ifli2, ifei2 = [True, False], "Unknown"
+
+def insert_front(lst, ele):
+    """Adds tuple element to front of list."""
+    lst[0:0] = [ele]
+
+insert_front(ifli1, ifei1)
+insert_front(ifli2, ifei2)
+print("Assignment 2 output:", ifli1)
+print("Assignment 2 output", ifli2)
+
+dli1 = [7, "joe", "apple", 9.81, False]
+dli2 = ["Unknown", True, False]
+
+def delete_last(lst):
+    """Deletes last element in list."""
+    del lst[-1]
+
+delete_last(dli1)
+delete_last(dli2)
+print("Assignment 3 output:", dli1)
+print("Assignment 3 output:", dli2)

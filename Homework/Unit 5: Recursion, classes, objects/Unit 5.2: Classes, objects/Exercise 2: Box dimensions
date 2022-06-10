@@ -1,0 +1,17 @@
+class Box:
+    """Returns volume and surface area of a box given its dimensions."""
+
+    def __init__(self, length, width, height):
+        self._length = length
+        self._width = width
+        self._height = height
+
+    def volume(self):
+        return self._length * self._width * self._height
+
+    def surface_area(self):
+        return (2 * (self._length * self._width)) + (2 * (self._length * self._height)) + (2 * (self._height * self._width))
+
+tesseract = Box(8, 8, 8)
+print(tesseract.volume())
+print(tesseract.surface_area())

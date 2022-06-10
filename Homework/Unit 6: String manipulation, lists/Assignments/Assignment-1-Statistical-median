@@ -1,0 +1,19 @@
+fmi1 = [13,7,-3,82,4]
+fmi2 = [13,7,-3,2,82,4]
+
+def find_median(lst):
+    """Returns the statistical median of a sorted list."""
+    lst.sort()
+    if len(lst) % 2 == 0:
+        return lst[int((len(lst) / 2) - 1):-int((len(lst) / 2) - 1)]
+    else:
+        return lst[int((len(lst) / 2)):-int((len(lst) / 2))]
+
+print(find_median(fmi1))
+print(find_median(fmi2))
+
+def add_surname(lst):
+    """Filters names starting with K from list and makes them Kardashian."""
+    return [[x + " Kardashian"] for x in lst if x[0] == "K"]
+
+print(add_surname(asi))

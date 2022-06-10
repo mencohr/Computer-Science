@@ -1,0 +1,30 @@
+class Taxicab:
+    """Initializes and sets coordinates and odometer."""
+
+    def __init__(self, cx, cy):
+        self._cx = cx
+        self._cy = cy
+        self._co = 0
+
+    def get_x(self):
+        return self._cx
+
+    def get_y(self):
+        return self._cy
+
+    def get_o(self):
+        return self._co
+
+    def move_x(self, x):
+        self._co += abs(x)
+        return self._co
+
+    def move_y(self, y):
+        self._co += abs(y)
+        return self._co
+
+cab = Taxicab(5,-8)
+cab.move_x(3)
+cab.move_y(-4)
+cab.move_x(1)
+print(cab.get_o())

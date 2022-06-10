@@ -1,0 +1,21 @@
+"""Prompts an integer to guess. If the guess is higher than the integer, prints "Too high". If it's lower, prints "Too low". Uses a loop to repeat until the correct guess. Prints the number of guesses or "You guessed it in one try" if correct the first time."""
+
+target = int(input("Enter an integer for the player to guess: "))
+guess = int(input("Enter your guess: "))
+tries = 0
+
+if guess == target and tries == 0:
+    print("You guessed it on the first try.")
+
+while guess != target:
+    if guess > target:
+        print("Too high. Try again.")
+        tries += 1
+        guess = int(input("Enter another guess: "))
+    elif guess < target:
+        print("Too low. Try again.")
+        tries += 1
+        guess = int(input("Enter another guess: "))
+
+if guess == target:
+    print("You guessed it in " + str(tries + 1) + " tries.")

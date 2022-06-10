@@ -1,0 +1,21 @@
+# Rewrite with bisect syntax
+# import bisect 
+
+words_list_txt = open("G:\Other computers\My Computer\Projects\word_list.txt", "r")
+
+def pop_list():
+    lst = []
+
+    with words_list_txt as file:
+        for line in file:
+            new_line = line.rstrip()
+            lst.extend(new_line.split())
+        return lst
+
+def in_bisect(word):
+    lst = pop_list()
+    if word in lst:
+        return True
+    return False
+
+print(in_bisect("snoogle"))

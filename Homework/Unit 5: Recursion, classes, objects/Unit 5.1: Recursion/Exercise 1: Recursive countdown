@@ -1,0 +1,11 @@
+def countdown(x):
+    """Recursively counts down from a positive integer."""
+    if x % 1 != 0:
+        return "Must be integer."
+    elif x < 0:
+        return "Must be positive integer."
+    elif x < 2:
+        return str(x)
+    return str(x) + " " + countdown(x - 1)
+
+print(countdown(5))

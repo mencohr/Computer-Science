@@ -1,0 +1,19 @@
+"""Assigns the value 3.14159 to variable pi and prints the value."""
+
+pi = 3.1459
+print(pi)
+
+"""Assigns the value "Smith" to variable last_name, prints the value."""
+
+last_name = "Smith"
+print(last_name)
+
+"""Assigns the value 19.3 to variable length_in_inches, prints the type the variable refers to."""
+
+length_in_inches = 19.3
+print(type(length_in_inches))
+
+"""Assigns the value "haberdashery" to variable occupation, prints the type the variable refers to."""
+
+occupation = "haberdashery"
+print(type(occupation))

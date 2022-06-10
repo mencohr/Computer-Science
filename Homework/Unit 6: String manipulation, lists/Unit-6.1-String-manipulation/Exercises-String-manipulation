@@ -1,0 +1,31 @@
+string = "Understand well as I may, my comprehension can only be an infinitesimal fraction of all I want to understand"
+string2 = "Lovelace"
+string3 = "Byron"
+string4 = "tacocat"
+
+def last_char(x):
+    """Returns last letter of a string."""
+    return x[-1]
+
+def midstring(x):
+    """Returns middle of string minus first and last characters."""
+    if len(x) < 3:
+        return ""
+    return x[1:-1]
+
+def sort_two_strings(x, y):
+    """Sorts two strings alphabetically."""
+    if x.lower() > y.lower():
+        return y + " " + x
+    return x + " " + y
+
+def is_pal(x):
+    """Determines if string is a palindrome."""
+    if x == x[::-1]:
+        return True
+    return False
+
+print(last_char(string))
+print(midstring(string))
+print(sort_two_strings(string2, string3))
+print(is_pal(string4))

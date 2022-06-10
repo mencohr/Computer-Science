@@ -1,0 +1,38 @@
+"""Readers a number, assigns it to a variable, and prints "In range" if between 50-100 or "Out of range" otherwise."""
+
+num = float(input("Submit a number: "))
+
+if 50 < num < 100:
+    print("In range.")
+else:
+    print("Out of range.")
+
+# 2. Write code that reads a number, assigns it to a variable, and prints "Small" if less than 10,
+# "Medium" if at least 10 but less than 50, and "Large" if at least 50.
+
+num = float(input("Submit a number: "))
+
+if num < 10:
+    print("Small")
+elif num < 50:
+    print("Medium")
+else:
+    print("Large")
+
+# 3. Write code that reads an integer and assigns it to a variable.
+# If that integer from 1-5, print the English word for that number.
+# Otherwise, print "Input not recognized."
+
+num = float(input("Submit a number: "))
+if num == 1:
+    print("One")
+elif num == 2:
+    print("Two")
+elif num == 3:
+    print("Three")
+elif num == 4:
+    print("Four")
+elif num == 5:
+    print("Five")
+else:
+    print("Input not recognized.")

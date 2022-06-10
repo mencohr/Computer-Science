@@ -1,0 +1,11 @@
+class HourlyWorker:
+    """Initializes hourly worker with name, ID, wage. """
+
+    def __init__(self, name, ID, wage):
+        self._name = name
+        self._ID = ID
+        self._wage = wage
+
+the_sun = HourlyWorker("Mason", 111, 14)
+print(the_sun._name, "is a wage slave.")
+print("He only makes", the_sun._wage, "an hour.")

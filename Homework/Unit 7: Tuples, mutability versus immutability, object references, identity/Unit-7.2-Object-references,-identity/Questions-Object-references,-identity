@@ -1,0 +1,21 @@
+# Variables can be equal but not refer to the same object:
+
+q1_num_1 = 7
+q1_num_2 = 7
+
+# Variables can't refer to the same object and be unequal:
+
+q2_num_1 = -3
+q2_num_2 = -3
+print(q2_num_1 == q2_num_2)
+
+# If nums_1 and nums_2 refer to the same list object, and nums_1[0] is deleted, that affects nums_2 as they're the same list. With tuples, this can't occur as tuples are
+# immutable.
+
+# Rebinding a variable occurs when a new value is assigned to it:
+
+q3_zip_code = "97331"
+q3_zip_code = "98225"
+print(q3_zip_code)
+
+# q3_zip_code creates a string with the "97331" value and binds zip_code to that object. The second line creates a new string "98225", rebinding zip_code to the new object.

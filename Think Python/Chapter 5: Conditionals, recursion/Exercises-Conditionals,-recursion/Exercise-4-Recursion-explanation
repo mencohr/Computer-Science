@@ -1,0 +1,26 @@
+# What is the output of this program? Draw a stack diagram showing the program's state when it prints the result.
+#
+# def recurse(n, s):
+#     if n == 0:
+#         print(s)
+#     else:
+#         recurse(n-1, n+s)
+#
+# recurse(3,0)
+#
+# What would happen if the function was called with recurse(-1, 0)?
+# Write a docstring explaining the function.
+
+def recurse(n, s):
+    """Counts down n while adding the current n value to s until n reaches 0.
+    Reaches maximum excursion depth if n < 0."""
+    if n == 0:
+        print(s)
+    else:
+        recurse(n-1, n+s)
+
+| __main__ |         |         |
+| -------- | ------- | ------- |
+| recurse  | n --> 2 | s --> 3 |
+| recurse  | n --> 1 | s --> 5 |
+| recurse  | n --> 0 | s --> 6 |

@@ -1,0 +1,14 @@
+def check_fermat(a, b, c, n): # an + bn = cn
+    """Checks Fermat's theorem."""
+    theorem = (a ** n) + (b ** n)
+    if n > 2 and (theorem == (c ** n)):
+        return "Fermat was wrong."
+    else:
+        return "No, that doesn't work."
+
+def fermat():
+    """Inputs values for Fermat theorem."""
+    a, b, c, n = (int(x) for x in input("Enter a, b, c, n: ").split(","))
+    print(check_fermat(a, b, c, n))
+
+fermat()

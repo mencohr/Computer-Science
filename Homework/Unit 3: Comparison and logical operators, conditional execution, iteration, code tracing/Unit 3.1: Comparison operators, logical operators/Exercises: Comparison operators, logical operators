@@ -1,0 +1,14 @@
+"""Prints the value of 17 < 5."""
+
+print(17 < 5)
+
+"""Reads a number and assigns it to a variable. Prints True if that value is greater than 10 or False otherwise."""
+
+num = float(input("Submit a number: "))
+print(num > 10)
+
+# 3. Write code that reads a number, assigns it to a variable,
+# and prints True if that value is between 50 and 100 (inclusive), False otherwise.
+
+num = float(input("Submit a number: "))
+print(50 <= num <= 100)

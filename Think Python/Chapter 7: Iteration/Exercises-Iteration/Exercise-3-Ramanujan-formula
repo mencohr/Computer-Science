@@ -1,0 +1,39 @@
+import math
+
+def estimate_pi():
+    """Computes the Ramanujan formula and returns an estimate of pi."""
+    def factorial(x):
+        products = range(1, x)
+        f = 1
+        while f <= x:
+            if x > 0:
+                for i in products:
+                    f *= (i + 1)
+                return f
+        if x == 0:
+            f = 1
+            return f
+        else:
+            return "Error, must be zero or greater."
+
+    def summation():
+        total = 0
+        lst_results = []
+        k = 0
+        result = ((factorial(4 * k)) / (factorial(k) ** 4)) * ((1103 + (26390 * k)) / (396 ** (4 * k)))
+        lst_results.append(result)
+
+        while result > 1e-15:
+            k += 1
+            result = ((factorial(4 * k)) / (factorial(k) ** 4)) * ((1103 + (26390 * k)) / (396 ** (4 * k)))
+            lst_results.append(result)
+        for i in range(0, len(lst_results)):
+            total += lst_results[i]
+            return 1 / (((2 * (2 ** 0.5)) / 9801) * total)
+
+    summation()
+
+    print ("Est:  " + str(summation()) + "\n"
+           "Calc: " + str(math.pi))
+
+estimate_pi()

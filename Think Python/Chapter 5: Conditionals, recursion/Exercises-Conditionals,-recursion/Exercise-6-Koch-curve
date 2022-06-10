@@ -1,0 +1,29 @@
+import turtle
+t = turtle.Turtle()
+
+def koch(t, l):
+    """Draws a Koch curve."""
+    if l < 10:
+        t.fw(l)
+        return
+    m = l / 3
+    koch(t, m)
+    t.lt(60)
+    koch(t, m)
+    t.rt(120)
+    koch(t, m)
+    t.lt(60)
+    koch(t, m)
+
+def snowflake(t, l):
+    """Draws the outline of a snowflake."""
+    for i in range(3):
+        koch(t, l)
+        t.rt(120)
+
+t.pu()
+t.goto(-150, 90)
+t.pd()
+snowflake(t, 300)
+
+turtle.mainloop()

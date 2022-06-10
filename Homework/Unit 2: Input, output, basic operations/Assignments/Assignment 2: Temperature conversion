@@ -1,0 +1,6 @@
+"""Converts Celsius temperatures to Fahrenheit."""
+
+print("Enter a Celcius temperature.")
+c = float(input())
+f = ((9 / 5) * c) + 32
+print(" The temperature in Fahrenheit is: " + str(f))
